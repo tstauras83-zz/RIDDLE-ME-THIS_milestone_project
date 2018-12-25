@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<head>
+    <title>{% block title %} index {% endblock %}</title>
+    <style type="text/css">
+        #index_page_{
+            border:10px solid #222629;
+            text-align:center;
+            
+        }
+        #head_text{
+            text-align:center;
+            font-size: 64px;
+        }
+        #body-styles{
+            background: #222629;
+        }
+        #button-colors{
+            color: #222629;
+            background: #86c232;
+        }
+    </style>
+</head>
+<body id="body-styles">
+<h1 id="head_text">main menu</h1>
+<div class = "container" id="index_page_">
+    <div class = "row">
+        <div class="col-sm">
+            <a href="{{ url_for('login') }}"  class="btn btn-secondary btn-block active" role="button" aria-pressed="true">Login</a>
+        </div>
+        <div class="col-sm">
+            <a href="{{ url_for('register') }}"  class="btn btn-secondary btn-block active" role="button" aria-pressed="true">Register</a>
+        </div>
+    </div>
+    <br>
+    <div class = "row justify-content-md-center">
+        <div class="col-md-6">
+            <a href="{{ url_for('leaderboard') }}"  class="btn btn-secondary btn-block active" role="button" aria-pressed="true">Leaderboard</a>
+        </div>
+    </div>
+    <br>
+    <div class = "row justify-content-md-center">
+        <div class="col-md-6">
+            <a href="{{ url_for('login') }}" class="btn btn-danger btn-block active" role="button" aria-pressed="true">EXIT</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+</body>

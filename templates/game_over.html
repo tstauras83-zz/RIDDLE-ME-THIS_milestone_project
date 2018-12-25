@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<head>
+  <title>{% block title %} game over! {% endblock %}</title>
+
+</head>
+{% block content %}
+    <div class="alert alert-success" role="alert" class="row">
+        Congratulations {{ player }}, you've completed the game! Your final score is {{ score }}
+    </div>
+    <div class="alert alert-success" role="alert" class="row">
+        Current high score held by: {{ highscorer }} with a high score of {{ highscore }}
+    </div>
+    <form method="POST" action="{{ url_for('new_game') }}" class="row">
+        <input type="hidden" name="player" value="{{ player }}">
+        <input type="submit" value="New game?" class="btn btn-primary">
+        <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">main menu</a>
+    </form>
+{% endblock %}

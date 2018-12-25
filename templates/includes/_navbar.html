@@ -1,0 +1,11 @@
+<nav class="navbar navbar-dark bg-dark mb-4">
+        <a href="{{ url_for('login') }}" class="navbar-brand">Riddle game</a>
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('game_over') }}">game over</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('leaderboard') }}">leaderboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('riddle') }}">riddle page</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">login</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">register</a></li>
+        </ul>
+    </nav>
